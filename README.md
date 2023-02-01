@@ -3,7 +3,7 @@
 ```
 consul validate /etc/consul.d/config.json
 ```
-#### consul validate
+#### consul validate(/etc/consul.d/)
 ```
 consul validate /etc/consul.d/
 ```
