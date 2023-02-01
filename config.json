@@ -9,6 +9,7 @@
     "consul_Server2",
     "consul_Server3"
   ],
+  "enable_local_script_checks": true,
   "log_level": "info",
   "log_file": "/var/log/consul/",
   "log_rotate_duration": "24h",
