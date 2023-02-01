@@ -1,0 +1,21 @@
+{
+    "service": {
+      "name": "SSH Services(TCP)",
+      "id": "ssh-services-1",
+      "tags": [
+        "ssh",
+        "sshd"
+      ],
+      "port": 22,
+      "checks": [
+        {
+          "Name": "tcp check status",
+          "ID": "tcp-check-status-1",
+          "ServiceID": "tcp-service-1",
+          "TCP": "localhost:22",
+          "interval": "10s",
+          "Timeout": "1s"
+        }
+      ]
+    }
+  }

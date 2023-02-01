@@ -1,0 +1,22 @@
+{
+    "service": {
+      "name": "Web Services",
+      "id": "web-services-1",
+      "tags": [
+        "web",
+        "http",
+        "nginx"
+      ],
+      "port": 80,
+      "checks": [
+        {
+          "Name": "tcp check status",
+          "ID": "tcp-check-status-1",
+          "ServiceID": "web-service-id",
+          "TCP": "localhost:80",
+          "interval": "1s",
+          "Timeout": "1s"
+        }
+      ]
+    }
+  }
