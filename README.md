@@ -1,7 +1,11 @@
 # consul-agent
-#### consul validate
+#### consul validate(config.json)
 ```
 consul validate /etc/consul.d/config.json
+```
+#### consul validate
+```
+consul validate /etc/consul.d/
 ```
 #### consul start
 ```
