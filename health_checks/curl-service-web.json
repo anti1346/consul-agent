@@ -1,0 +1,25 @@
+{
+    "service": {
+      "name": "Web Services",
+      "id": "web-services-3",
+      "tags": [
+        "web",
+        "http",
+        "nginx"
+      ],
+      "port": 80,
+      "checks": [
+        {
+          "Name": "curl check status",
+          "ID": "curl-check-status-2",
+          "ServiceID": "web-service-id",
+          "args": [
+            "curl",
+            "localhost"
+          ],
+          "interval": "1s",
+          "Timeout": "1s"
+        }
+      ]
+    }
+  }
