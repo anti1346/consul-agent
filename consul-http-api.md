@@ -18,3 +18,12 @@ https://developer.hashicorp.com/consul/docs/discovery/dns
 ```
 dig @127.0.0.1 -p 8600 -x {Consul Member IP}
 ```
+
+## Agent HTTP API
+##### services list
+```
+curl -s http://127.0.0.1:8500/v1/agent/services | jq
+```
+
+##### services list
+curl -s http://127.0.0.1:8500/v1/agent/service/web | jq .
