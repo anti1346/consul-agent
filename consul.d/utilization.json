@@ -1,52 +1,52 @@
 {
     "service": {
-      "id": "resource-usage-1",
-      "name": "Monitor Resource Usage",
-      "tags": [
-        "Monitor Resource Usage",
-        "CPU",
-        "Memory",
-        "Disk"
-      ],
-      "Meta": {
-        "service": "Monitor Resource Usage"
-      },
-      "address": "",
-      "port": 0,
-      "checks": [
-        {
-          "name": "cpu utilization",
-          "notes": "Critical 80%, warning 70%",
-          "args": [
-            "/etc/consul.d/scripts/utilization/cpu.sh",
-            "-limit",
-            "256MB"
-          ],
-          "interval": "30s",
-          "timeout": "5s"
+        "id": "resource-usage-1",
+        "name": "Monitor Resource Usage",
+        "tags": [
+            "Monitor Resource Usage",
+            "CPU",
+            "Memory",
+            "Disk"
+        ],
+        "Meta": {
+            "service": "Monitor Resource Usage"
         },
-        {
-          "name": "memory utilization",
-          "notes": "Critical 90%, warning 80%",
-          "args": [
-            "/etc/consul.d/scripts/utilization/memory.sh",
-            "-limit",
-            "256MB"
-          ],
-          "interval": "30s",
-          "timeout": "5s"
-        },
-        {
-          "name": "disk utilization",
-          "notes": "Critical 90%, warning 80%",
-          "args": [
-            "/etc/consul.d/scripts/utilization/disk.sh",
-            "-limit",
-            "256MB"
-          ],
-          "interval": "10m",
-          "timeout": "5s"
-        }
-      ]
+        "address": "",
+        "port": 0,
+        "checks": [
+            {
+                "name": "cpu utilization",
+                "notes": "Critical 80%, warning 70%",
+                "args": [
+                    "/etc/consul.d/scripts/utilization/cpu.sh",
+                    "-limit",
+                    "256MB"
+                ],
+                "interval": "30s",
+                "timeout": "5s"
+            },
+            {
+                "name": "memory utilization",
+                "notes": "Critical 90%, warning 80%",
+                "args": [
+                    "/etc/consul.d/scripts/utilization/memory.sh",
+                    "-limit",
+                    "256MB"
+                ],
+                "interval": "30s",
+                "timeout": "5s"
+            },
+            {
+                "name": "disk utilization",
+                "notes": "Critical 90%, warning 80%",
+                "args": [
+                    "/etc/consul.d/scripts/utilization/disk.sh",
+                    "-limit",
+                    "256MB"
+                ],
+                "interval": "60s",
+                "timeout": "5s"
+            }
+        ]
     }
-  }
+}

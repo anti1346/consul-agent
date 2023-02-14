@@ -1,0 +1,39 @@
+{
+    "service": {
+        "name": "Ping Check",
+        "id": "ping-check-external-2",
+        "tags": [ "ping", "google.com", "digitalocean.com", "amazon.com" ],
+        "Meta": {
+            "check": "ping",
+            "service": "ping"
+        },
+        "Port": 0,
+        "Address": "",
+        "checks": [
+            {
+                "Name": "ping check(google.com)",
+                "id": "chk21",
+                "args": [ "ping", "-c1", "google.com" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            },
+            {
+                "Name": "ping check(amazon.com)",
+                "id": "chk22",
+                "args": [ "ping", "-c1", "amazon.com" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            },
+            {
+                "Name": "ping check(digitalocean.com)",
+                "id": "chk23",
+                "args": [ "ping", "-c1", "digitalocean.com" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            }
+        ]
+    }
+}

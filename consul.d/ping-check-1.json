@@ -1,0 +1,44 @@
+{
+    "service": {
+        "name": "Ping Check",
+        "id": "ping-check-internal-1",
+        "tags": [
+            "ping",
+            "local ip",
+            "gateway ip",
+            "nameserver ip"
+        ],
+        "Meta": {
+            "check": "ping",
+            "service": "ping"
+        },
+        "Port": 0,
+        "Address": "",
+        "checks": [
+            {
+                "Name": "ping check(local ip)",
+                "id": "chk11",
+                "args": [ "/etc/consul.d/scripts/pingchk.sh", "localip" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            },
+            {
+                "Name": "ping check(gateway ip)",
+                "id": "chk12",
+                "args": [ "/etc/consul.d/scripts/pingchk.sh", "gatewayip" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            },
+            {
+                "Name": "ping check(nameserver ip)",
+                "id": "chk13",
+                "args": [ "/etc/consul.d/scripts/pingchk.sh", "nameserverip" ],
+                "interval": "3s",
+                "Timeout": "1s",
+                "status": "warning"
+            }
+        ]
+    }
+}
