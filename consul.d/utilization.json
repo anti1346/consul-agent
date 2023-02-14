@@ -22,7 +22,7 @@
             "-limit",
             "256MB"
           ],
-          "interval": "15s",
+          "interval": "30s",
           "timeout": "5s"
         },
         {
@@ -33,7 +33,7 @@
             "-limit",
             "256MB"
           ],
-          "interval": "15s",
+          "interval": "30s",
           "timeout": "5s"
         },
         {
@@ -44,7 +44,7 @@
             "-limit",
             "256MB"
           ],
-          "interval": "15s",
+          "interval": "10m",
           "timeout": "5s"
         }
       ]
